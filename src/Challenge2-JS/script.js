@@ -18,3 +18,12 @@ if (hourOfDay && minuteOfDay !== undefined && hourOfDay === 00 && minuteOfDay ==
 }
 	
 console.log( 'R' , balance.toFixed(2));
+/**
+ * In the if statement 'hourOfDay' and 'minuteOfDay' should be checked for undefined instead of null
+ * starting is not defined,should be replaced with 'startingAfterTax'
+ * balance is missplled
+ * changed balance.toFixed(3) to balance.toFixed(2) for 2 decimal places
+ * Removed variables(taxAsDecimal , startingAfterTax , & balance inside the if statement)
+ * used parseFloat function to converttax string to decimal value
+ * Prefix 'R' is added
+ */
