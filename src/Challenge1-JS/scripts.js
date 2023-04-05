@@ -16,6 +16,6 @@ console.log('Secondary phone is valid numerical string:', secondaryValid );
 //Changed const secondaryValid = typeof number == secondaryPhone to const
 //secondaryValid = typeof secondaryPhone == 'string' &&  /^\d+$/.test(secondaryPhone) 
 
-//The regular expression /^\ / is used to check if the phone numbers contain only numerical digits.
+//The regular expression /^\['string']/ is used to check if the strings contain only numerical digits.
 
 
