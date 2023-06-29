@@ -1,21 +1,25 @@
+// @ts-check
 const primaryPhone = 'O748105141';
 const secondaryPhone = '0219131568';
 
+/**
+ * Checks if a string contains only numbers
+ * @param {string} str -The input string to be checked.
+ * @returns {boolean} - Returns true if a string contains only numbers,otherwise it returns false
+ */
+const containsOnlyNumbers = (str) => {
+  for (let i = 0; i < str.length; i++) {
+    if (isNaN(parseInt(str[i]))) {
+      return false;
+    }
+  }
+  return true;
+}
 
+const primaryValid = containsOnlyNumbers(primaryPhone);
+const secondaryValid = containsOnlyNumbers(secondaryPhone);
 
-const primaryValid = typeof primaryPhone === 'string' && /^[0-9]/.test(primaryPhone)  
-const secondaryValid = typeof secondaryPhone === 'string' && /^[0-9]/.test(secondaryPhone)  
-
-console.log('Primary phone is valid numerical string:', primaryValid);
-console.log('Secondary phone is valid numerical string:', secondaryValid );
-
-
-//Changed const primaryValid = typeof number == primaryPhone to const
-//primaryValid = typeof primaryPhone == 'string' &&   /^[0-9]/.test(primaryPhone)  
-
-//Changed const secondaryValid = typeof number == secondaryPhone to const
-//secondaryValid = typeof secondaryPhone == 'string' &&  /^[0-9]/.test  (secondaryPhone) 
-
-//The regular expression /^\['string']/ is used to check if the strings contain only numerical digits.
+console.log('Primary phone contains only numbers:', primaryValid);
+console.log('Secondary phone contains only numbers:', secondaryValid);
 
 
